@@ -63,7 +63,7 @@ const Home = () => {
       <Carousel />
 
       <div className="mt-6  text-2xl font-bold px-4">Meals That Await You</div>
-      <div className="mt-4 h-60 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scroll-smooth">
+      <div className="mt-4 h-50 sm:h-55 lg:h-60 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scroll-smooth">
         <div className="flex flex-nowrap gap-6 px-4">
           {menuItems.map((meal) => (
             <div
@@ -73,7 +73,7 @@ const Home = () => {
               <img
                 src={meal.strMealThumb}
                 alt={meal.strMeal}
-                className="w-full h-36 sm:h-40 md:h-44 rounded-full object-cover"
+                className=" h-30 sm:h-36 lg:h-44 rounded-full object-cover"
               />
               <p className="mt-2 text-center text-sm sm:text-base font-semibold">
                 {meal.strMeal}
@@ -83,7 +83,7 @@ const Home = () => {
         </div>
       </div>
 
-      <h2 className="text-3xl font-semibold px-4 mt-4">Popular Picks</h2>
+      <h2 className="text-3xl font-semibold px-4 md:mt-2 lg:mt-4">Popular Picks</h2>
       <div className="mt-4 h-60 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  gap-4 px-2 ml-2">
         {randomMeals.map((meal) => (
           <div key={meal.idMeal} className="flex flex-col items-center">

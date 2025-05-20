@@ -53,7 +53,7 @@ export default function Carousel() {
       </button>
       <img
         src={images[currentIndex]}
-        className="overflow-hidden w-full h-[50vh] object-cover "
+        className="overflow-hidden w-full h-[30vh] sm:h-[50vh] object-cover "
       />
       <button
         onClick={goToPrev}
@@ -83,7 +83,7 @@ export default function Carousel() {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 border border-black rounded-full transition-all duration-200
+            className={`w-2 h-2 sm:w-3 sm:h-3 border border-black rounded-full transition-all duration-200
               ${
                 currentIndex === index
                   ? "bg-black scale-110"
