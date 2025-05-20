@@ -27,7 +27,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         onClick={goToNext}
         className="absolute top-[50%] -translate-y-[50%] hover:scale-110 w-10 h-10 flex items-center justify-center 
@@ -78,12 +78,12 @@ export default function Carousel() {
           </svg>
         }
       </button>
-      <div className="flex gap-6 items-center justify-center m-1">
+      <div className="flex gap-6 items-center justify-center m-1 bg-[#fff9ec]">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 sm:w-3 sm:h-3 border border-black rounded-full transition-all duration-200
+            className={`w-2 h-2 sm:w-3 sm:h-3 border border-black rounded-full transition-all duration-200 
               ${
                 currentIndex === index
                   ? "bg-black scale-110"

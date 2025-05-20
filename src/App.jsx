@@ -5,7 +5,7 @@ import FoodDetail from "./pages/FoodDetail";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[#fff9ec] min-h-screen">
       <Header />
       <Home />
     </div>

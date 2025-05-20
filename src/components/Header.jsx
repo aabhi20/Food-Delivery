@@ -27,7 +27,7 @@ export default function () {
         <input
           type="text"
           placeholder="search restaurants or dishes..."
-          className="border-[#FFBE0B] border-[1px] hover:border-[#CC9500] rounded-2xl p-2.5 text-[1rem] w-[53vw] lg:w-[30vw] focus:outline-0 flex pl-10"
+          className="border-[#FFBE0B] border-[1px] hover:border-[#CC9500] rounded-2xl p-2.5 text-[1rem] w-[46vw] lg:w-[30vw] focus:outline-0 flex pl-10"
         />
       </div>
       <div className="flex justify-between gap-3.5 text-[1.5rem] m-1">
