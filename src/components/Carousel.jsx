@@ -29,7 +29,7 @@ export default function Carousel() {
   return (
     <div className="relative ">
       <button
-        onClick={goToNext}
+        onClick={goToPrev}
         className="absolute top-[50%] -translate-y-[50%] hover:scale-110 w-10 h-10 flex items-center justify-center 
        text-white text-[5rem] bg-[rgba(230,57,70,0.7)] rounded-full 
        transition-all duration-300 z-10 cursor-pointer p-2"
@@ -56,7 +56,7 @@ export default function Carousel() {
         className="overflow-hidden w-full h-[30vh] sm:h-[50vh] object-cover "
       />
       <button
-        onClick={goToPrev}
+        onClick={goToNext}
         className="absolute top-[50%] -translate-y-[50%] hover:scale-110 right-0 w-10 h-10 flex items-center justify-center 
        text-white text-[5rem] bg-[rgba(230,57,70,0.7)] rounded-full 
        transition-all duration-300 z-10 cursor-pointer p-2 font-extrabold "
