@@ -14,6 +14,7 @@ export default function () {
     <div className="text-[20px] flex  justify-between items-center bg-[#fff9ec] shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
       <img src={banner} alt="" className="w-26 md:w-32 " />
 
+
       <ul className=" lg:flex hidden  justify-between md:gap-8 gap-2 md:text-[1.4rem] font-medium text-[1rem]">
         <li>Home</li>
         <li>Menu</li>
