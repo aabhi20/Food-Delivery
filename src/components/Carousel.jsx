@@ -78,7 +78,7 @@ export default function Carousel() {
           </svg>
         }
       </button>
-      <div className="flex gap-6 items-center justify-center m-1 bg-[#fff9ec]">
+      <div className="flex gap-6 items-center justify-center m-1 bg-[#f7f0d6]">
         {images.map((_, index) => (
           <button
             key={index}

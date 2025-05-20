@@ -59,7 +59,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#fff9ec]">
+    <div className="bg-[#f7f0d6] ">
       <Carousel />
 
       <div className=" mt-6  text-2xl font-bold px-4">Meals That Await You</div>
@@ -86,7 +86,7 @@ const Home = () => {
       <h2 className="text-3xl font-semibold px-4 md:mt-2 lg:mt-4">
         Popular Picks
       </h2>
-      <div className="mt-4 h-60 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  gap-4 px-2 ml-2">
+      <div className=" mt-4  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  gap-4 px-2 ml-2">
         {randomMeals.map((meal) => (
           <div key={meal.idMeal} className="flex flex-col items-center">
             <img
