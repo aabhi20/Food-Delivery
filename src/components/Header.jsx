@@ -10,7 +10,11 @@ import {
 export default function () {
   return (
     <div className="text-[20px] flex  justify-between items-center bg-[#fff9ec] shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
-      <img src="src/assets/pictures/banner.png" alt="" className="md:w-32 w-12"  />
+      <img
+        src="src/assets/pictures/banner.png"
+        alt=""
+        className="md:w-32 w-12"
+      />
 
       <ul className="flex justify-between md:gap-8 gap-2 md:text-[1.4rem] font-medium text-[1rem]">
         <li>Home</li>
