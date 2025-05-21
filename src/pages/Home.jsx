@@ -63,7 +63,7 @@ const Home = () => {
       <Carousel />
 
       <div className=" mt-6  text-2xl font-bold px-4">Meals That Await You</div>
-      <div className="mt-4 h-50 sm:h-55 lg:h-60 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scroll-smooth">
+      <div className="mt-4 h-43 sm:h-55 lg:h-60 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scroll-smooth">
         <div className="flex flex-nowrap gap-2 sm:gap-6 px-4">
           {menuItems.map((meal) => (
             <div
