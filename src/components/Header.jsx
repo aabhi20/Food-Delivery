@@ -13,7 +13,7 @@ import {
 export default function () {
   return (
     <>
-      <header className="flex items-center justify-between bg-[#f7f0d6] sm:hidden">
+      <header className="flex items-center justify-between bg-[#f7f0d6] sm:hidden  z-50 fixed w-full">
         <div className="flex items-center p-2 sm:hidden bg-[#f7f0d6]  w-[70vw]">
           <div className="flex items-center w-24 h-12 border-1 bg-[#f0f0e9] border-[#FFBE0B]  border-r-0 rounded-[10px] rounded-r-none">
             <img src={banner} className="w-24 h-14 " />
