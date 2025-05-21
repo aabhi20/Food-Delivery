@@ -18,8 +18,12 @@ export default function () {
           <div className="flex items-center w-24 h-12 border-1 bg-[#f0f0e9] border-[#FFBE0B]  border-r-0 rounded-[10px] rounded-r-none">
             <img src={banner} className="w-24 h-14 " />
           </div>
-          <div className="border-1 border-l-0 border-[#FFBE0B] bg-[#f0f0e9] hover:border-[#CC9500] p-[11px] rounded-[10px] rounded-l-none w-[45vw]">
-            <input type="text" placeholder="Search..." className="" />
+          <div className="border-1 border-l-0 border-[#FFBE0B] bg-[#f0f0e9] hover:border-[#CC9500] p-[11px] rounded-[10px] rounded-l-none ">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="border-0 outline-none"
+            />
           </div>
         </div>
         <div className="flex items-center gap-2 w-[25vw]   ">
