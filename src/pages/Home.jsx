@@ -73,7 +73,7 @@ const Home = () => {
               <img
                 src={meal.strMealThumb}
                 alt={meal.strMeal}
-                className=" h-30 sm:h-36 lg:h-44 rounded-full object-cover"
+                className=" h-25 sm:h-36 lg:h-44 rounded-full object-cover"
               />
               <p className="mt-2 text-center text-sm sm:text-base font-semibold">
                 {meal.strMeal}
@@ -92,7 +92,7 @@ const Home = () => {
             <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
-              className="rounded-3xl object-cover p-2 w-60 h-60"
+              className="rounded-3xl object-cover p-2 w-50 h-40 sm:w-60 sm:h-50"
             />
             <p className="mt-2 text-center font-semibold">{meal.strMeal}</p>
           </div>
