@@ -22,7 +22,7 @@ export default function () {
             <input type="text" placeholder="search..." className="" />
           </div>
         </div>
-        <div className="flex items-center gap-2 w-[20vw]   ">
+        <div className="flex items-center gap-2 w-[25vw]   ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
