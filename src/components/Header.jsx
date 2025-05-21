@@ -15,11 +15,11 @@ export default function () {
     <>
       <header className="flex items-center justify-between bg-[#f7f0d6] sm:hidden">
         <div className="flex items-center p-2 sm:hidden bg-[#f7f0d6]  w-[70vw]">
-          <div className="flex items-center w-24 h-12 border-1 bg-[#f0f0e9] border-[#FFBE0B] border-r-0 rounded-[10px] rounded-r-none">
+          <div className="flex items-center w-24 h-12 border-1 bg-[#f0f0e9] border-[#FFBE0B]  border-r-0 rounded-[10px] rounded-r-none">
             <img src={banner} className="w-24 h-14 " />
           </div>
-          <div className="border-1 border-[#FFBE0B] bg-[#f0f0e9] hover:border-[#CC9500] p-[11px] rounded-[10px] rounded-l-none w-[45vw]">
-            <input type="text" placeholder="search..." className="" />
+          <div className="border-1 border-l-0 border-[#FFBE0B] bg-[#f0f0e9] hover:border-[#CC9500] p-[11px] rounded-[10px] rounded-l-none w-[45vw]">
+            <input type="text" placeholder="Search..." className="" />
           </div>
         </div>
         <div className="flex items-center gap-2 w-[25vw]   ">
