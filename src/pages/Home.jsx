@@ -59,7 +59,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#f7f0d6] ">
+    <div className="bg-[#f7f0d6] pt-15 pb-20">
       <Carousel />
 
       <div className=" mt-6  text-2xl font-bold px-4">Meals That Await You</div>

@@ -27,7 +27,7 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <button
         onClick={goToPrev}
         className="absolute top-[50%] -translate-y-[50%] hover:scale-110 w-10 h-10 flex items-center justify-center 
