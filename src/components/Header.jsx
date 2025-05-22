@@ -17,11 +17,11 @@ export default function () {
       {/* HEADER FOR SMALL SCREEN */}
 
       <header className="flex items-center justify-between bg-[#f7f0d6] sm:hidden  z-50 fixed w-full shadow-[0_4px_10px_rgba(0,0,0,0.1)]">
-        <div className="flex items-center p-2 sm:hidden bg-[#f7f0d6]  w-[70vw]">
+        <div className="flex items-center p-2 sm:hidden bg-[#f7f0d6]  w-[68vw]">
           <div className="flex items-center w-24 h-12 border-1 bg-[#f0f0e9] border-[#FFBE0B]  border-r-0 rounded-[10px] rounded-r-none">
-            <img src={banner} className="w-24 h-14 " />
+            <img src={banner} className=" " />
           </div>
-          <div className="border-1 border-l-0 border-[#FFBE0B] bg-[#f0f0e9] hover:border-[#CC9500] p-[11px] rounded-[10px] rounded-l-none w-[46vw]">
+          <div className="border-1 border-l-0 border-[rgb(255,190,11)] bg-[#f0f0e9] hover:border-[#CC9500] p-[11px] rounded-[10px] rounded-l-none w-[44vw]">
             <input
               type="text"
               placeholder="Search..."
@@ -29,7 +29,7 @@ export default function () {
             />
           </div>
         </div>
-        <div className="flex items-center gap-2 w-[25vw]   ">
+        <div className="flex items-center gap-2 mr-2">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
