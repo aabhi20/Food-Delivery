@@ -87,9 +87,12 @@ export default function () {
         </div>
 
         <div className="flex justify-between gap-3.5 text-[1.5rem] m-1">
-          <FaHeart className="wishlist-icon" />
-          <FaShoppingCart className="cart-icon" />
-
+          <button>
+            <FaHeart className="wishlist-icon" />
+          </button>
+          <button>
+            <FaShoppingCart className="cart-icon" />
+          </button>
           <button>
             <FaUser className="profile-icon" />
           </button>
