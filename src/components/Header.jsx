@@ -11,7 +11,26 @@ import {
   FaSearch,
 } from "react-icons/fa";
 
-export default function () {
+export default function Header() {
+  const [isopen, setIsOpen] = useState(false);
+  const profileRef = useRef(null);
+  const [isColored, setIsColored] = useState(false);
+
+  // CLOSING DROPDOWN
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setIsOpen(false);
+        setIsColored(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, []);
+
   return (
     <>
       {/* HEADER FOR SMALL SCREEN */}
@@ -50,20 +69,51 @@ export default function () {
               <path d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
             </svg>
           </button>
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="size-7"
+          <div
+            ref={profileRef}
+            className="relative inline-block text-left z-50"
+          >
+            <button
+              onClick={() => {
+                setIsOpen(!isopen);
+                setIsColored(!isColored);
+              }}
+              className="flex "
             >
-              <path
-                fillRule="evenodd"
-                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className={`size-7 cursor-pointer transition-colors duration-100 ${
+                  isColored ? "text-[rgb(255,190,11)]" : "text-black"
+                }`}
+                onClick={() => setIsColored(!isColored)}
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            {isopen && (
+              <ul className="absolute right-0 mt-4  w-40 bg-[#ffffff] shadow-md rounded-lg  flex flex-col border-1 border-[rgb(255,190,11)] z-50 ">
+                <li className="border p-2 border-[rgb(255,190,11)]">profile</li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  coupons
+                </li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  rewards
+                </li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  logout
+                </li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  about Us
+                </li>
+              </ul>
+            )}
+          </div>
         </div>
       </header>
 
@@ -96,9 +146,51 @@ export default function () {
           <button>
             <FaShoppingCart className="cart-icon" />
           </button>
-          <button>
-            <FaUser className="profile-icon" />
-          </button>
+          <div
+            ref={profileRef}
+            className="relative inline-block text-left z-50"
+          >
+            <button
+              onClick={() => {
+                setIsOpen(!isopen);
+                setIsColored(!isColored);
+              }}
+              className="flex "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className={`size-7 cursor-pointer transition-colors duration-100 ${
+                  isColored ? "text-[rgb(255,190,11)]" : "text-black"
+                }`}
+                onClick={() => setIsColored(!isColored)}
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            {isopen && (
+              <ul className="absolute right-0 mt-4  w-60  bg-[#ffffff] shadow-md rounded-lg  flex flex-col border-1 border-[rgb(255,190,11)] z-50 ">
+                <li className="border p-2 border-[rgb(255,190,11)]">profile</li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  coupons
+                </li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  rewards
+                </li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  logout
+                </li>
+                <li className="border p-2 border-[rgb(255,190,11)] border-t-0">
+                  about Us
+                </li>
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </>
